@@ -84,6 +84,13 @@
     "text": "Can we not just let LLMs do all the programming for us?\n\nLLMs are great for generating some code for us, including R code of course …\nBut we still need to be the “conductor” of the agentic orchestra:\n\nWe need to know which structure of the package we want to build\nWe need to know which parts of the package are most critical and require which tests\nWe need to know how to review the LLM’s suggested code and correct it when it’s wrong\nWe need to ensure that we don’t constantly repeat ourselves and know when to refactor code into reusable functions"
   },
   {
+    "objectID": "index.html#recent-example-what-can-happen-if-we-trust-llms-with-everything",
+    "href": "index.html#recent-example-what-can-happen-if-we-trust-llms-with-everything",
+    "title": "Why Programming is (Still) a Critical Skill for Statisticians",
+    "section": "Recent example what can happen if we trust LLMs with everything",
+    "text": "Recent example what can happen if we trust LLMs with everything\n\nJeremy Crane reported his start-up’s experience here"
+  },
+  {
     "objectID": "index.html#cannot-handover-to-other-statisticians",
     "href": "index.html#cannot-handover-to-other-statisticians",
     "title": "Why Programming is (Still) a Critical Skill for Statisticians",
