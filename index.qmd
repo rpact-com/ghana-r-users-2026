@@ -195,6 +195,10 @@ Partly based on the open-access article "The statistical software revolution in 
 
 :::
 
+## Recent example what can happen if we trust LLMs with everything
+
+![Jeremy Crane reported his start-up's experience [here](https://x.com/lifeof_jer/status/2048103471019434248)](ai-deleted-everything.png)
+
 ## Cannot handover to other statisticians
 
 ::: {.incremental}
