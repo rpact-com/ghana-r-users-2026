@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.36">
+
+  <meta name="author" content="Daniel Sabanés Bové (RPACT)">
+  <meta name="dcterms.date" content="2026-05-03">
+  <title>Slides for SnB 2025 Keynote – Why Programming is (Still) a Critical Skill for Statisticians</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-97bb6b1ddace9bb08b131ad158ea2a20.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="RPACT_logo_full.png" data-background-opacity="1" data-background-position="95% 85%" data-background-size="20%" class="quarto-title-block center">
+  <h1 class="title">Why Programming is (Still) a Critical Skill for Statisticians</h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Daniel Sabanés Bové (RPACT) 
+</div>
+        <p class="quarto-title-affiliation">
+            Ghana R Users Community
+          </p>
+    </div>
+</div>
+
+  <p class="date">May 3, 2026</p>
+</section><section id="TOC">
+<nav role="doc-toc"> 
+<h2 id="toc-title">Table of contents</h2>
+<ul>
+<li><a href="#/preamble" id="/toc-preamble">Preamble</a></li>
+<li><a href="#/my-career-path" id="/toc-my-career-path">My career path</a></li>
+<li><a href="#/programming-is-ubiquitous-but-still-neglected" id="/toc-programming-is-ubiquitous-but-still-neglected">Programming is ubiquitous, but (still) neglected</a></li>
+<li><a href="#/why-is-this-still-a-problem" id="/toc-why-is-this-still-a-problem">Why is this (still) a problem?</a></li>
+<li><a href="#/what-can-we-do-about-it" id="/toc-what-can-we-do-about-it">What can we do about it?</a></li>
+<li><a href="#/just-a-few-examples" id="/toc-just-a-few-examples">Just A Few Examples</a></li>
+<li><a href="#/conclusion" id="/toc-conclusion">Conclusion</a></li>
+</ul>
+</nav>
+</section>
+<section>
+<section id="preamble" class="title-slide slide level1 center" data-background-iframe="https://cicdguy.github.io/colored-particles/">
+<h1>Preamble</h1>
+
+</section>
+<section id="acknowledgements" class="slide level2">
+<h2>Acknowledgements</h2>
+<p>Partly based on the open-access article “The statistical software revolution in pharmaceutical development: challenges and opportunities in open source” (<a href="https://www.sciencedirect.com/science/article/pii/S1359644626000188?via%3Dihub">Drug Discovery Today</a>) which is joint work with:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Heidi Seibold</li>
+<li>Anne-Laure Boulesteix</li>
+<li>Juliane Manitz</li>
+<li>Alessandro Gasparini</li>
+<li>Burak K. Günhan</li>
+<li>Oliver Boix</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Armin Schüler</li>
+<li>Sven Fillinger</li>
+<li>Sven Nahnsen</li>
+<li>Anna E. Jacob</li>
+<li>Thomas Jaki</li>
+</ul>
+</div></div>
+</section>
+<section id="objective-of-this-presentation" class="slide level2">
+<h2>Objective of this presentation</h2>
+<ul>
+<li class="fragment">I would like to <strong>inspire</strong> you with my career path</li>
+<li class="fragment">I would like to <strong>motivate</strong> you to improve your programming skills</li>
+<li class="fragment">I would like you to <strong>strive</strong> to get yourself savvy in good software engineering practices and apply them in your projects</li>
+<li class="fragment">I would like you to <strong>influence</strong> your statistics colleagues and departments in your organizations</li>
+</ul>
+</section></section>
+<section>
+<section id="my-career-path" class="title-slide slide level1 center" data-background-iframe="https://cicdguy.github.io/colored-particles/">
+<h1>My career path</h1>
+
+</section>
+<section id="my-path-to-statistics" class="slide level2">
+<h2>My path to Statistics</h2>
+<ul>
+<li class="fragment">I was good in math and I really liked stochastics<br>
+(“What is the chance of winning the lottery?”)</li>
+<li class="fragment">But I always had fun programming<br>
+(Remember those days of <a href="https://en.wikipedia.org/wiki/BASIC">Basic</a> and <a href="https://en.wikipedia.org/wiki/Turbo_Pascal">Turbo Pascal</a>?)</li>
+<li class="fragment">I was also interested in medicine …<br>
+… but I could faint when watching somebody draw blood from my arm</li>
+<li class="fragment">So I chose statistics because I could combine math and programming, and work with medical data!</li>
+<li class="fragment">I was formally trained as a statistician (B.Sc., M.Sc., Ph.D.)</li>
+<li class="fragment">I started working at Roche as a biostatistician</li>
+</ul>
+</section>
+<section id="pharma-industry-and-roche" class="slide level2">
+<h2>Pharma industry and Roche</h2>
+
+<img data-src="pharma_companies.svg" class="r-stretch"></section>
+<section id="what-i-did-at-roche" class="slide level2">
+<h2>What I did at Roche</h2>
+<ul>
+<li class="fragment">I worked in early phase oncology studies and projects:
+<ul>
+<li class="fragment">Dose escalation studies</li>
+<li class="fragment">Biomarker analyses</li>
+<li class="fragment">Discussions with medical doctors, regulatory experts, etc.</li>
+<li class="fragment">Clinical trial protocols, statistical analysis plans, etc.</li>
+</ul></li>
+<li class="fragment">I also programmed a lot with R
+<ul>
+<li class="fragment">Simulation studies for dose escalation designs</li>
+<li class="fragment">Developed R package for continual reassessment method (CRM) designs</li>
+</ul></li>
+</ul>
+</section>
+<section id="what-i-did-not-do-during-those-first-years" class="slide level2">
+<h2>What I did <em>not</em> do during those first years</h2>
+<ul>
+<li class="fragment">I did <em>not</em> store my programs in version control systems</li>
+<li class="fragment">I did <em>not</em> worry too much about making my code readable by others</li>
+<li class="fragment">I did <em>not</em> try to make calculations reproducible</li>
+<li class="fragment">I did <em>not</em> get any code review of my study design simulations</li>
+<li class="fragment">I did <em>not</em> write any unit tests for my packages</li>
+</ul>
+</section>
+<section id="some-tricks-i-learned-in-tech" class="slide level2">
+<h2>Some tricks I learned in Tech</h2>
+<ul>
+<li class="fragment">After about 5 years I had the opportunity to switch gears and work at Google</li>
+<li class="fragment">I learned a lot quickly about:
+<ul>
+<li class="fragment">how to write unit tests</li>
+<li class="fragment">how to use a consistent code style<br>
+</li>
+<li class="fragment">how to write design documents</li>
+<li class="fragment">how to name functions</li>
+<li class="fragment">how to review code and respond to review feedback</li>
+<li class="fragment">how to check in code into the (internal) repository</li>
+</ul></li>
+<li class="fragment">Also, but not that important:
+<ul>
+<li class="fragment">how to write SQL queries, macros, unit tests for those</li>
+<li class="fragment">got to know memes and how to create new ones</li>
+</ul></li>
+</ul>
+</section>
+<section id="but-pharma-is-more-fun-for-me" class="slide level2">
+<h2>But Pharma is more fun for me</h2>
+<ul>
+<li class="fragment">I really liked that I did a lot of programming in a structured way in Google</li>
+<li class="fragment">But I missed the scientific aspects from Pharma …<br>
+… where we deal not just with numbers, but also biology, medicine, patients, medical doctors, etc.</li>
+<li class="fragment">And Roche just started venturing more into R territory, so I built up the Statistical Engineering team there from 2020 to 2024</li>
+</ul>
+</section>
+<section id="started-rconis-and-joined-rpact-as-partner" class="slide level2">
+<h2>Started RCONIS and Joined RPACT as Partner</h2>
+<ul>
+<li class="fragment">Started working remotely for RCONIS mid-2024 from Taiwan</li>
+<li class="fragment">RPACT builds statistical tools for drug development</li>
+<li class="fragment">Main products:
+<ul>
+<li class="fragment"><code>rpact</code> (R package for clinical trial design and analysis)</li>
+<li class="fragment"><code>crmPack</code> (R package for dose escalation designs)</li>
+<li class="fragment">RPACT Cloud (web application for clinical trial design and analysis)</li>
+</ul></li>
+<li class="fragment">Website: <a href="https://rpact.com">rpact.com</a></li>
+</ul>
+</section></section>
+<section>
+<section id="programming-is-ubiquitous-but-still-neglected" class="title-slide slide level1 center" data-background-iframe="https://cicdguy.github.io/colored-particles/">
+<h1>Programming is ubiquitous, but (still) neglected</h1>
+
+</section>
+<section id="almost-all-statisticians-are-programming" class="slide level2">
+<h2>(Almost) all statisticians are programming</h2>
+<ul>
+<li class="fragment">We don’t use calculators anymore, right?</li>
+<li class="fragment">There are a lot of graphical tools that we can use for simple tasks …<br>
+… but it won’t be sufficient for most biostatistics use cases</li>
+<li class="fragment">We learn programming, maybe already in high school, or latest in undergraduate courses</li>
+<li class="fragment">We wrangle, analyze, visualize, predict, … data with code every day</li>
+</ul>
+</section>
+<section id="but-many-dont-take-it-serious-enough" class="slide level2">
+<h2>But many don’t take it serious enough</h2>
+<ul>
+<li class="fragment">Most of the coding we do <strong>alone</strong> without any discussion or review</li>
+<li class="fragment">We often <strong>copy and paste</strong> code from each other and adapt it every time</li>
+<li class="fragment">We often shy away from sharing our code because we think it is too <strong>ugly</strong></li>
+<li class="fragment">We often don’t take enough <strong>time</strong> to write clean code because we are too busy</li>
+<li class="fragment">We often just develop code <strong>locally</strong> on our laptops</li>
+<li class="fragment">We rarely use <strong>version control</strong> systems</li>
+</ul>
+</section></section>
+<section>
+<section id="why-is-this-still-a-problem" class="title-slide slide level1 center" data-background-iframe="https://cicdguy.github.io/colored-particles/">
+<h1>Why is this (still) a problem?</h1>
+
+</section>
+<section id="can-we-not-just-let-llms-do-all-the-programming-for-us" class="slide level2">
+<h2>Can we not just let LLMs do all the programming for us?</h2>
+<ul>
+<li class="fragment">LLMs are great for generating some code for us, including R code of course …</li>
+<li class="fragment">But we still need to be the “conductor” of the agentic orchestra:
+<ul>
+<li class="fragment">We need to know which structure of the package we want to build</li>
+<li class="fragment">We need to know which parts of the package are most critical and require which tests</li>
+<li class="fragment">We need to know how to review the LLM’s suggested code and correct it when it’s wrong</li>
+<li class="fragment">We need to ensure that we don’t constantly repeat ourselves and know when to refactor code into reusable functions</li>
+</ul></li>
+</ul>
+</section>
+<section id="cannot-handover-to-other-statisticians" class="slide level2">
+<h2>Cannot handover to other statisticians</h2>
+<ul>
+<li class="fragment">Statisticians (too) take vacations, go on longer leave, finish their PhD/PostDoc, etc.</li>
+<li class="fragment">Then another statistician (peers, managers) needs to back up or take over the project</li>
+<li class="fragment">They might need to revisit the design or analyses and thus need to <strong>modify</strong> the code</li>
+<li class="fragment">Might not <strong>find</strong> the code at all (because not in a version controlled repository)</li>
+<li class="fragment">Might not be able to <strong>understand</strong> the code (because unreadable by others)</li>
+</ul>
+</section>
+<section id="cannot-maintain-code" class="slide level2">
+<h2>Cannot maintain code</h2>
+<ul>
+<li class="fragment">Not just switching between different statisticians, but also <strong>over time</strong>, things can become difficult
+<ul>
+<li class="fragment">When I read code from one, two years ago, it is almost code from another person</li>
+<li class="fragment">If I look back at my quickly written, ugly code, which is not documented, I have a very hard time</li>
+</ul></li>
+<li class="fragment">In the “copy and paste workflow”, you can’t help anybody else
+<ul>
+<li class="fragment">If you discover <strong>bugs</strong>, those cannot be fixed across projects in one go</li>
+<li class="fragment">If you add <strong>features</strong>, they cannot be used by anybody else</li>
+</ul></li>
+</ul>
+</section>
+<section id="cannot-prevent-bugs" class="slide level2">
+<h2>Cannot prevent bugs</h2>
+<ul>
+<li class="fragment">If we modify the code and don’t have tests, we simply <strong>don’t know</strong> if it still works correctly</li>
+<li class="fragment">Typically we just run then the whole script again and if it does not fail with an error we think it is fine</li>
+<li class="fragment">But it might still produce <strong>wrong results</strong> due to new bugs</li>
+<li class="fragment">And if we fix a bug, and don’t add a test for it at the same time, it might <strong>come back</strong> later</li>
+<li class="fragment">This is even more important in software packages that we create for us and others</li>
+</ul>
+</section>
+<section id="cannot-reproduce-results" class="slide level2">
+<h2>Cannot reproduce results</h2>
+<ul>
+<li class="fragment">When we don’t prepare for it, new versions of software packages can lead to different results<br>
+</li>
+<li class="fragment">Very hard to reproduce <strong>manual steps</strong>:
+<ul>
+<li class="fragment">e.g.&nbsp;moving data around, running scripts, creating documents, etc.</li>
+<li class="fragment">would need to be thoroughly documented to have a small chance, but that is usually omitted</li>
+</ul></li>
+<li class="fragment">But Statistics is a key component of the <strong>scientific value chain</strong> …<br>
+… thus has a responsibility to ensure reproducibility</li>
+</ul>
+</section>
+<section id="cannot-submit-to-external-stakeholders" class="slide level2">
+<h2>Cannot submit to external stakeholders</h2>
+<ul>
+<li class="fragment">If we cannot share reliably internally in the company, then less so with external stakeholders</li>
+<li class="fragment">So far, analyses that need to be shared with regulators are often rewritten by statistical programmers
+<ul>
+<li class="fragment">Duplicates the work with original coding and has additional risk of introducing bugs</li>
+<li class="fragment">But is usually not done for study protocol contents (sample size, simulations)</li>
+</ul></li>
+<li class="fragment">Often reporting code was translated to proprietary software because that was considered the only “validated” way
+<ul>
+<li class="fragment">Still can have bugs in any software and the actual analysis scripts and macros</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="what-can-we-do-about-it" class="title-slide slide level1 center" data-background-iframe="https://cicdguy.github.io/colored-particles/">
+<h1>What can we do about it?</h1>
+
+</section>
+<section id="become-aware-of-the-issues" class="slide level2">
+<h2>Become aware of the issues</h2>
+<ul>
+<li class="fragment">Most statisticians actually have examples where lax programming led to such problems</li>
+<li class="fragment">Let’s realize that <strong>a lot</strong> is at stake:<br>
+we are not building airplanes that could fall from the sky …<br>
+… but we are impacting important decisions!</li>
+<li class="fragment">For example, in a pharma company, it matters for patients that we
+<ul>
+<li class="fragment">calculate the <strong>right</strong> sample size of a clinical trial,</li>
+<li class="fragment">more generally determine the <strong>right</strong> clinical trial design,</li>
+<li class="fragment">help finding the <strong>right</strong> medicine candidates based on preclinical experiments,</li>
+<li class="fragment">etc.</li>
+</ul></li>
+</ul>
+</section>
+<section id="become-aware-of-the-issues-contd" class="slide level2">
+<h2>Become aware of the issues (cont’d)</h2>
+
+<img data-src="schwab-held-significance.png" class="r-stretch quarto-figure-center"><p class="caption">Significance, 18 (3): 6-7. <a href="https://doi.org/10.1111/1740-9713.01522">https://doi.org/10.1111/1740-9713.01522</a></p></section>
+<section id="take-software-engineering-seriously" class="slide level2">
+<h2>Take software engineering seriously</h2>
+<ul>
+<li class="fragment">We know what we should do, let’s just take the time and energy to do it</li>
+<li class="fragment">We can learn a lot from the statistical programmers:
+<ul>
+<li class="fragment">organize ourselves with standards (starts with naming conventions for files and folders)</li>
+<li class="fragment">automate repetitive tasks (LLMs can help us to write tools for this)</li>
+<li class="fragment">consider double programming of key results</li>
+</ul></li>
+<li class="fragment">Processes should consider code in the same priority as documents (statistical analysis plans etc.)
+<ul>
+<li class="fragment">that implies code review, good and consistent code style, business continuity, …</li>
+</ul></li>
+<li class="fragment">Strive to be on par with Tech companies with regards to coding quality</li>
+</ul>
+</section>
+<section id="take-software-engineering-seriously-contd" class="slide level2">
+<h2>Take software engineering seriously (cont’d)</h2>
+
+<img data-src="seibold-charlton-significance.png" class="r-stretch quarto-figure-center"><p class="caption">Significance, 18 (4): 42-44. <a href="https://doi.org/10.1111/1740-9713.01554">https://doi.org/10.1111/1740-9713.01554</a></p></section>
+<section id="educate-educate-educate" class="slide level2">
+<h2>Educate, educate, educate</h2>
+<ul>
+<li class="fragment">Starts with <strong>secondary schools</strong>:
+<ul>
+<li class="fragment">computer science should become a standard subject, not just be an extra</li>
+<li class="fragment">same importance as math, geography, physics, etc.</li>
+</ul></li>
+<li class="fragment">Continues at <strong>university</strong> with undergraduate and graduate programs:
+<ul>
+<li class="fragment">computer science must become a key component of statistics and data science programs</li>
+<li class="fragment">good software engineering practices warrant dedicated courses</li>
+</ul></li>
+<li class="fragment">Continues with <strong>post-graduate</strong> education during the work life:<br>
+online courses, software engineering workshops, conference sessions, etc.</li>
+</ul>
+</section>
+<section id="establish-dedicated-teams" class="slide level2">
+<h2>Establish dedicated teams</h2>
+<ul>
+<li class="fragment"><strong>Research Software Engineering</strong> (RSE) teams are now established in academia, including data science institutions</li>
+<li class="fragment">Similarly pharma companies are establishing software engineering focused teams</li>
+<li class="fragment">Direct focus is often development of reusable software</li>
+<li class="fragment">We should not stop there but also strive to improve the <strong>day to day work</strong>:<br>
+biostatistics, medical writing, preclinical experiments, etc.</li>
+<li class="fragment">Software engineering work is complex, so we need <strong>top talents</strong> for this</li>
+</ul>
+</section>
+<section id="collaborate-across-organizations" class="slide level2">
+<h2>Collaborate across organizations</h2>
+<ul>
+<li class="fragment">More <strong>natural</strong> now that we use R and other open source software</li>
+<li class="fragment">Has become very <strong>easy</strong> in the last decade<br>
+(e.g.&nbsp;video conferencing, cloud based documents, code sharing platforms)</li>
+<li class="fragment">Loosely coupled software modules allow to <strong>“plug and play”</strong>
+<ul>
+<li class="fragment">combining different modules to make them fit company standards</li>
+<li class="fragment">connecting to internals via company specific extensions</li>
+</ul></li>
+<li class="fragment"><strong>Key opportunity</strong> in contrast to previous proprietary software based, point-and-click, analyses</li>
+</ul>
+</section></section>
+<section>
+<section id="just-a-few-examples" class="title-slide slide level1 center" data-background-iframe="https://cicdguy.github.io/colored-particles/">
+<h1>Just A Few Examples</h1>
+
+</section>
+<section id="working-group-openstatsware" class="slide level2">
+<h2>Working group <a href="https://openstatsware.org"><code>openstatsware</code></a></h2>
+<ul>
+<li class="fragment">Has been founded in August 2022 as working group in the ASA Biopharmaceutical Section</li>
+<li class="fragment">More than 50 members from over 30 pharma companies, CRO, etc.
+<ul>
+<li class="fragment">open for new members</li>
+</ul></li>
+<li class="fragment">Focuses on
+<ol type="1">
+<li class="fragment">building packages together (already on CRAN are <a href="https://cran.r-project.org/package=mmrm"><code>mmrm</code></a>, <a href="https://cran.r-project.org/package=brms.mmrm"><code>brms.mmrm</code></a>, <a href="https://cran.r-project.org/package=maicplus"><code>maicplus</code></a>)</li>
+<li class="fragment">disseminating good software engineering (SWE) practices (workshops, videos)<br>
+</li>
+</ol></li>
+</ul>
+</section>
+<section id="tools-for-reproducible-research" class="slide level2">
+<h2>Tools for reproducible research</h2>
+<p>Many great tools exist to help with reproducibility of statistical analyses (see <a href="https://cran.r-project.org/web/views/ReproducibleResearch.html">CRAN task view</a>), e.g.:</p>
+<ul>
+<li class="fragment"><code>Sweave</code> (2002)</li>
+<li class="fragment"><code>knitr</code> and <code>Rmarkdown</code> (2014)</li>
+<li class="fragment"><code>packrat</code> (2014)</li>
+<li class="fragment"><code>officer</code> (2017)</li>
+<li class="fragment"><code>usethis</code> (2017)</li>
+<li class="fragment"><code>renv</code> (2019)</li>
+<li class="fragment"><code>targets</code> (2020)</li>
+<li class="fragment"><code>quarto</code> (2021)</li>
+</ul>
+</section>
+<section id="tools-for-package-developers" class="slide level2">
+<h2>Tools for package developers</h2>
+<p>Similarly lots of tools have been provided for package developers:</p>
+<ul>
+<li class="fragment"><code>testthat</code> (2009)</li>
+<li class="fragment"><code>devtools</code> (2011)</li>
+<li class="fragment"><code>checkmate</code> (2014)</li>
+<li class="fragment"><code>lintr</code> (2014)</li>
+<li class="fragment"><code>spelling</code> (2017)</li>
+<li class="fragment"><code>styler</code> (2017)</li>
+<li class="fragment"><code>pkgdown</code> (2018)</li>
+<li class="fragment"><code>precommit</code> (2020)</li>
+</ul>
+</section>
+<section id="templates-to-start-from-use-cases" class="slide level2">
+<h2>Templates to start from use cases</h2>
+<p>Templates can be a great start to centralize code for reoccurring use cases, e.g.:</p>
+<ul>
+<li class="fragment"><a href="https://insightsengineering.github.io/tlg-catalog/">TLG Catalog</a></li>
+<li class="fragment"><a href="https://insightsengineering.github.io/biomarker-catalog/">Biomarker Analysis Catalog</a></li>
+<li class="fragment"><a href="https://www.rpact.com/vignettes">RPACT Vignettes</a> (Clinical trial design)</li>
+<li class="fragment"><a href="https://gpaux.github.io/Mediana/CaseStudies.html">Mediana case studies</a> (Simulations of trials)</li>
+<li class="fragment"><a href="https://pharmaverse.github.io/falcon">Falcon</a> (FDA Safety Tables and Figures)</li>
+</ul>
+</section>
+<section id="guidelines-for-good-practices" class="slide level2">
+<h2>Guidelines for good practices</h2>
+<ul>
+<li class="fragment"><a href="https://ropensci.org/"><code>rOpenSci</code></a>
+<ul>
+<li class="fragment">Non-profit initiative founded in 2011</li>
+<li class="fragment">Staff, process, guidelines for Statistical Software Peer Review of R packages</li>
+</ul></li>
+<li class="fragment"><a href="https://the-turing-way.netlify.app/">The Turing Way</a>
+<ul>
+<li class="fragment">Started in 2019 as a guide for reproducibility (covering Version Control, Code Testing, and Continuous integration)</li>
+<li class="fragment">Now encompasses guides for Reproducible Research, Project Design, Communication, Collaboration, Ethical Research</li>
+</ul></li>
+<li class="fragment"><a href="https://www.openstatsware.org/guide.html"><code>openstatsguide</code></a> with “Minimum Viable Good Practices for High Quality Statistical Software Packages”
+<ul>
+<li class="fragment">Concise check list for building R, Python, Julia packages</li>
+</ul></li>
+</ul>
+</section>
+<section id="guidelines-for-good-practices-contd" class="slide level2">
+<h2>Guidelines for good practices (cont’d)</h2>
+<ul>
+<li class="fragment"><a href="https://doi.org/10.1002/sim.9169">“Best practices in statistical computing”</a> (Sanchez et al., 2021)
+<ul>
+<li class="fragment">5 steps for implementing a code quality assurance (QA) process
+<ol type="1">
+<li class="fragment">adherence to clean and consistent code style</li>
+<li class="fragment">clear written documentation (code, workflow, decisions)</li>
+<li class="fragment">careful version control</li>
+<li class="fragment">good data management</li>
+<li class="fragment">regular testing and review</li>
+</ol></li>
+</ul></li>
+</ul>
+</section>
+<section id="workshops-teaching-good-practices" class="slide level2">
+<h2>Workshops teaching good practices</h2>
+<ul>
+<li class="fragment"><a href="https://rconsortium.github.io/asa-biop-swe-wg/blog/2023-gswe4rp-workshops-wrapup/">“Good Software Engineering Practices for R Packages”</a>
+<ul>
+<li class="fragment"><code>openstatsware</code> have run more than a dozen workshops across the globe since 2023!</li>
+</ul></li>
+<li class="fragment"><a href="https://carpentries.org/">“The Carpentries”</a>
+<ul>
+<li class="fragment">Teaches foundational coding and data science skills to researchers worldwide</li>
+<li class="fragment">Teaching material on software, data, and library is available</li>
+</ul></li>
+<li class="fragment"><a href="https://www.coursera.org/learn/making-data-science-work-for-clinical-reporting">“Making Data Science Work for Clinical Reporting”</a>
+<ul>
+<li class="fragment">Coursera course on how principles and methods from data science can be applied in clinical reporting</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="conclusion" class="title-slide slide level1 center" data-background-iframe="https://cicdguy.github.io/colored-particles/">
+<h1>Conclusion</h1>
+
+</section>
+<section id="conclusion-1" class="slide level2">
+<h2>Conclusion</h2>
+<ul>
+<li class="fragment">A <strong>lot</strong> in statistics depends on doing the programming well</li>
+<li class="fragment">Now is <strong>your</strong> chance to get savvy with the tools and good practices yourselves</li>
+<li class="fragment">You are the next generation of statisticians - use the <strong>opportunity</strong> to improve the way we work with code!</li>
+</ul>
+</section>
+<section id="thank-you" class="slide level2">
+<h2>Thank you!</h2>
+<p>These slides are at <a href="https://rpact-com.github.io/ghana-r-users-2026">rpact-com.github.io/ghana-r-users-2026</a></p>
+<p>Looking forward to connecting with you: <a href="https://www.linkedin.com/in/danielsabanesbove/">linkedin.com/in/danielsabanesbove</a></p>
+
+
+
+<img data-src="research-progress.png" class="r-stretch"></section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="RPACT_logo_full.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>Why Programming is (Still) a Critical Skill for Statisticians | <a href="http://creativecommons.org/licenses/by-sa/4.0/" title="License: CC BY-SA 4.0">License</a></p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: true,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
